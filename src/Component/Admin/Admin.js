@@ -2,5 +2,5 @@ import React from "react";
 
 import classes from "./Admin.module.css";
 
-const admin = props => <p>AM A PRODUCT 11!!!!!!!!!!!!!!!!</p>;
+const admin = props => <p>ADMIN PAGE!!!!!!!!!!!!!!!!</p>;
 export default admin;
