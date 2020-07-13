@@ -1,0 +1,40 @@
+.productPage {
+  /* padding: 15px; */
+  /* width: 100%; */
+}
+
+.productDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productDetails p {
+  color: #0a97b0;
+}
+
+.productDetails form {
+  margin: 60px 0;
+}
+
+.InputElement {
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  font: inherit;
+  padding: 7px 10px;
+  width: 50%;
+  display: block;
+  box-sizing: border-box;
+  margin-top: 30px;
+  border-radius: 9px;
+}
+
+.InputElement:focus {
+  outline: none;
+  background-color: #ccc;
+}
+
+.InputElement:last-child {
+  width: 70%;
+  margin-bottom: 35px;
+}

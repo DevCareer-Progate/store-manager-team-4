@@ -1,0 +1,36 @@
+.formControl {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.salesDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.salesDetails p {
+  color: #0a97b0;
+}
+
+.formControl img {
+  padding: 10px;
+  position: absolute;
+  top: 40px;
+  padding-left: 5px;
+}
+
+.InputElement {
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  font: inherit;
+  padding: 7px 10px;
+  width: 400px;
+  display: block;
+  box-sizing: border-box;
+  /* margin-top: 30px; */
+  border-radius: 9px;
+  padding-left: 67px;
+  height: 50px;
+}

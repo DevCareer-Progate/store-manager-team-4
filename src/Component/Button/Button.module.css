@@ -1,0 +1,30 @@
+.Button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  height: 45px;
+  background-color: #0a97b0;
+  font-size: 20px;
+  height: auto;
+  color: #fff;
+}
+
+.Button:hover {
+  opacity: 0.9;
+}
+.Button:focus {
+  outline: none;
+}
+
+.loginPage {
+  border-radius: 50px;
+  width: 10%;
+}
+.modal {
+  border-radius: 10px;
+  width: 100%;
+}
+.product {
+  border-radius: 7px;
+  width: 30%;
+}

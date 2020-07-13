@@ -1,0 +1,50 @@
+.modal {
+  position: fixed;
+  z-index: 500;
+  background-color: white;
+  width: 19%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px black;
+  padding: 16px;
+  left: 36%;
+  top: 30%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+  height: 369px;
+}
+
+.InputElement {
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  font: inherit;
+  padding: 6px 10px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  margin-top: 23px;
+}
+.InputElement:focus {
+  outline: none;
+  background-color: #ccc;
+}
+/* .formControl select {
+    padding
+} */
+.signupForm {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.select {
+  background-color: #fff;
+  width: 100%;
+  margin: 23px 0;
+  padding: 10px 0;
+  font: inherit;
+  color: gray;
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+}
