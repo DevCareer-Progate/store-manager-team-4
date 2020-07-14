@@ -35,8 +35,18 @@
 }
 
 .logInPage .content p {
-  font-size: 23px;
+  font-size: 1.9rem;
   max-width: 600px;
   margin: 20px 0 30px;
   color: #ffffff;
+}
+
+@media (max-width: 500px) {
+  .logInPage .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .logInPage .content p {
+    font-size: 1rem;
+  }
 }

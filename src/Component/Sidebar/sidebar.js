@@ -9,7 +9,23 @@ import Attendant from "../Attendant/Attendant";
 import classes from "./sidebar.module.css";
 class SidebarNav extends Component {
   state = {
-    currentChild: 0
+    currentChild: 0,
+    name: "",
+    id: "",
+    amount: "",
+    qty: "",
+    description: "",
+    products: []
+  };
+
+  handleInputChange = event => {
+    event.preventDefault();
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    this.setState({
+      [name]: value
+    });
   };
 
   handleDOMEvent = (event, id) => {
@@ -19,22 +35,69 @@ class SidebarNav extends Component {
     });
   };
 
-  formHandler() {}
+  submitFormHandler = event => {
+    event.preventDefault();
+    console.log(this.state);
+
+    const { id, name, amount, qty, description } = this.state;
+    const itemsInState = this.state.products;
+    const itemsArrayLength = itemsInState.length;
+    const ProductId = itemsArrayLength
+      ? itemsInState[itemsArrayLength - 1].id + 1
+      : 1;
+    this.setState({
+      products: [
+        ...itemsInState,
+        Object.assign(
+          {},
+          {
+            ProductId,
+            id,
+            name,
+            amount,
+            qty,
+            description
+          }
+        )
+      ],
+
+      ProductId,
+      id,
+      name,
+      amount,
+      qty,
+      description
+    });
+  };
+
   render() {
     let children;
+    // eslint-disable-next-line no-lone-blocks
     {
       if (this.state.currentChild == 1) children = <Admin />;
       else if (this.state.currentChild == 2) children = <Attendant />;
       else if (this.state.currentChild == 3)
-        children = <Product submitForm={this.formHandler} />;
-      else if (this.state.currentChild == 4) children = <Sales />;
+        children = (
+          <Product
+            name={this.state.name}
+            id={this.state.id}
+            amount={this.state.amount}
+            qty={this.state.qty}
+            description={this.state.description}
+            onChange={this.handleInputChange}
+            submitForm={this.submitFormHandler}
+          />
+        );
+      else if (this.state.currentChild == 4)
+        children = <Sales products={this.state.products} />;
     }
+    // console.log(this.state);
     return (
       <section className={classes.sidebarNav}>
         <div className={classes.sidebar}>
           <div className={classes.sidebarContent}>
             <div className={classes.logo}>
-              <h3>STM</h3>
+              <h3>S<span>T</span>M</h3>
             </div>
             <div className={classes.list}>
               <ul>

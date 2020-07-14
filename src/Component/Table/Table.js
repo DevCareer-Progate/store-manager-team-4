@@ -1,51 +1,60 @@
 import React, { Component } from "react";
-// import attendant from "../Attendant/Attendant";
 import classes from "./Table.module.css";
 
 class Table extends Component {
-  constructor(props) {
-    super(props); //since we are extending class Table so we have to use super in order to override Component class constructor
-    this.state = {
-      //state is by default an object
-      products: [
-        { id: 1, name: "Wasif", amount: 21, qty: 1, attendant: "feyi" },
-        { id: 2, name: "Ali", amount: 19, qty: 2, attendant: "bukola" },
-        { id: 3, name: "Saad", amount: 16, qty: 4, attendant: "odun" },
-        { id: 4, name: "Asad", amount: 25, qty: 2, attendant: "oyin" },
-        { id: 4, name: "Asad", amount: 25, qty: 2, attendant: "oyin" },
-        { id: 4, name: "Asad", amount: 25, qty: 2, attendant: "oyin" },
-        { id: 4, name: "Asad", amount: 25, qty: 2, attendant: "oyin" }
-      ]
-    };
-  }
-
   renderTableData() {
-    return this.state.products.map((product, index) => {
-      const { id, name, amount, qty, attendant } = product; //destructuring
+    if (this.props.products.length > 0) {
+      return this.props.products.map((product, index) => {
+        const { id, name, amount, qty, description } = product; //destructuring
+        return (
+          <tr key={id}>
+            <td>{id}</td>
+            <td>{name}</td>
+            <td>{amount}</td>
+            <td>{qty}</td>
+            <td>{description}</td>
+            {/* <td>{action}</td> */}
+          </tr>
+        );
+      });
+    } else {
       return (
-        <tr key={id}>
-          <td>{id}</td>
-          <td>{name}</td>
-          <td>{amount}</td>
-          <td>{qty}</td>
-          <td>{attendant}</td>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
           {/* <td>{action}</td> */}
         </tr>
       );
-    });
+    }
   }
 
   renderTableHeader() {
-    let header = Object.keys(this.state.products[0]);
-    return header.map((key, index) => {
-      return <th key={index}>{key.toUpperCase()}</th>;
-    });
+    if (this.props.products.length > 0) {
+      let removeProductId = Object.keys(this.props.products[0]);
+      for (let inputName of removeProductId) {
+        if (inputName === "ProductId") {
+          removeProductId.splice(0, 1);
+        }
+      }
+
+      const header = removeProductId.slice(0);
+      return header.map((key, index) => {
+        return <th key={index}>{key.toUpperCase()}</th>;
+      });
+    } else {
+      const header = ["id", "name", "amount", "qty", "description"];
+      return header.map((key, index) => {
+        return <th key={index}>{key.toUpperCase()}</th>;
+      });
+    }
   }
 
   render() {
     return (
       <div>
-        {/* <h1 id='title'>React Dynamic Table</h1> */}
         <table className={classes.products}>
           <tbody>
             <tr>{this.renderTableHeader()}</tr>
