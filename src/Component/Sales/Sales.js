@@ -26,7 +26,7 @@ const product = props => (
         <p>Edit Product</p>
       </div>
       <div className={classes.table}>
-        <Table />
+        <Table products={props.products}/>
       </div>
     </section>
   </Fragment>

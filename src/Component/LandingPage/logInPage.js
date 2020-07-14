@@ -2,8 +2,7 @@ import React from "react";
 
 import classes from "./LandingPage.module.css";
 import Button from "../Button/Button";
-// import Modal from "../Modal/modal";
-// import cart from "../../assests/images/store-manager.png";
+
 
 const logInPage = props => (
   <section className={classes.logInPage}>

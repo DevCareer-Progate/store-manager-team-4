@@ -1,8 +1,8 @@
 import React, { Fragment, Component } from "react";
 
-import Modal from "../../src/Component/Modal/modal";
-import Loginpage from "../Component/LandingPage/logInPage";
 import SidebarNav from "../../src/Component/Sidebar/sidebar";
+import Loginpage from "../../src/Component/LandingPage/logInPage";
+import Modal from '../Component/Modal/modal';
 
 export class AppContainer extends Component {
   state = {
@@ -29,6 +29,10 @@ export class AppContainer extends Component {
           modalClosed={this.modalClosedHandler}
           show={this.state.isClicked}
         /> */}
+
+        
+        {/* <Modal clicked ={this.state.isClicked}/> */}
+         {/* <LoginPage clicked ={this.state.isClicked}/> */}
         <SidebarNav />
       </Fragment>
     );
