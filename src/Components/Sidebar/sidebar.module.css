@@ -47,7 +47,7 @@
 .logo h3 {
   font-size: 19px;
 }
-.logo  span {
+.logo span {
   color: #026678;
   font-size: 40px;
 }
@@ -80,4 +80,32 @@ a {
 .children {
   width: 65%;
   padding: 40px;
+}
+
+@media (max-width: 500px) {
+  .sidebarNav {
+    display: block;
+  }
+  .sidebar {
+    height: 23vh;
+    width: auto;
+  }
+  .logo {
+    display: none;
+  }
+  ul {
+    display: inherit;
+    margin-top: 62px;
+  }
+  a {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    width: 182px;
+    left: -76px;
+  }
+  
 }

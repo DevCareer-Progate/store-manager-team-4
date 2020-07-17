@@ -33,4 +33,12 @@
   .loginPage {
     width: 62%;
   }
+  .product {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .product {
+    width: 188%;
+  }
 }

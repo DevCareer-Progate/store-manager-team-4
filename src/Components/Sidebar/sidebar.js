@@ -15,6 +15,7 @@ class SidebarNav extends Component {
     amount: "",
     qty: "",
     description: "",
+    action: {sell: 'sell', Delete: 'delete'},
     products: []
   };
 
@@ -39,7 +40,7 @@ class SidebarNav extends Component {
     event.preventDefault();
     console.log(this.state);
 
-    const { id, name, amount, qty, description } = this.state;
+    const { id, name, amount, qty, description, action } = this.state;
     const itemsInState = this.state.products;
     const itemsArrayLength = itemsInState.length;
     const ProductId = itemsArrayLength
@@ -56,7 +57,8 @@ class SidebarNav extends Component {
             name,
             amount,
             qty,
-            description
+            description,
+            action
           }
         )
       ],
@@ -66,7 +68,8 @@ class SidebarNav extends Component {
       name,
       amount,
       qty,
-      description
+      description,
+      action
     });
   };
 

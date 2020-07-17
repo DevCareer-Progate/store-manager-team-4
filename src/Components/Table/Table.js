@@ -5,7 +5,7 @@ class Table extends Component {
   renderTableData() {
     if (this.props.products.length > 0) {
       return this.props.products.map((product, index) => {
-        const { id, name, amount, qty, description } = product; //destructuring
+        const { id, name, amount, qty, description, action } = product; //destructuring
         return (
           <tr key={id}>
             <td>{id}</td>
@@ -13,7 +13,15 @@ class Table extends Component {
             <td>{amount}</td>
             <td>{qty}</td>
             <td>{description}</td>
-            {/* <td>{action}</td> */}
+            <td>
+              <span className={classes.action}>
+              <p>
+                <a href='#'>Sell</a>
+              </p>
+              <p>
+                <a href='#'>Delete</a>
+              </p>
+              </span></td>
           </tr>
         );
       });
@@ -45,7 +53,7 @@ class Table extends Component {
         return <th key={index}>{key.toUpperCase()}</th>;
       });
     } else {
-      const header = ["id", "name", "amount", "qty", "description"];
+      const header = ["id", "name", "amount", "qty", "description", 'action'];
       return header.map((key, index) => {
         return <th key={index}>{key.toUpperCase()}</th>;
       });
@@ -53,6 +61,7 @@ class Table extends Component {
   }
 
   render() {
+    console.log('product', this.props.products)
     return (
       <div>
         <table className={classes.products}>

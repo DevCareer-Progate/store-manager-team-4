@@ -1,8 +1,8 @@
 import React, { Fragment, Component } from "react";
 
-import SidebarNav from "../../src/Component/Sidebar/sidebar";
-import Loginpage from "../../src/Component/LandingPage/logInPage";
-import Modal from '../Component/Modal/modal';
+import SidebarNav from "../../src/Components/Sidebar/sidebar";
+// import Loginpage from "../../src/Components/LandingPage/logInPage";
+// import Modal from '../Component/Modal/modal';
 
 export class AppContainer extends Component {
   state = {

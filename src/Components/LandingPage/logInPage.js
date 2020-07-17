@@ -8,7 +8,7 @@ const logInPage = props => (
   <section className={classes.logInPage}>
     <div className={classes.content}>
       <h1>WELCOME TO STORE MANAGER</h1>
-      <p>
+      <p>f
         Lorem ipsum orem ipsum orem ipsum Lorem ipsum orem ipsumorem ipsumorem
         ipsumorem ipsumorem ipsumorem ipsumorem ipsumorem ipsumorem ipsyo
       </p>
