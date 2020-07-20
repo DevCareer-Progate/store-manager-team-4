@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import menuData from "./data";
 import Product from "../Product/product";
 import Sales from "../Sales/Sales";
 import Admin from "../Admin/Admin";
@@ -14,7 +15,7 @@ class SidebarNav extends Component {
     amount: "",
     qty: "",
     description: "",
-    action: {sell: 'sell', Delete: 'delete'},
+    action: { sell: "sell", Delete: "delete" },
     products: []
   };
 
@@ -76,9 +77,9 @@ class SidebarNav extends Component {
     let children;
     // eslint-disable-next-line no-lone-blocks
     {
-      if (this.state.currentChild == 1) children = <Admin />;
-      else if (this.state.currentChild == 2) children = <Attendant />;
-      else if (this.state.currentChild == 3)
+      if (this.state.currentChild === 1) children = <Admin />;
+      else if (this.state.currentChild === 2) children = <Attendant />;
+      else if (this.state.currentChild === 3)
         children = (
           <Product
             name={this.state.name}
@@ -90,7 +91,7 @@ class SidebarNav extends Component {
             submitForm={this.submitFormHandler}
           />
         );
-      else if (this.state.currentChild == 4)
+      else if (this.state.currentChild === 4)
         children = <Sales products={this.state.products} />;
     }
     // console.log(this.state);
@@ -99,7 +100,9 @@ class SidebarNav extends Component {
         <div className={classes.sidebar}>
           <div className={classes.sidebarContent}>
             <div className={classes.logo}>
-              <h3>S<span>T</span>M</h3>
+              <h3>
+                S<span>T</span>M
+              </h3>
             </div>
             <div className={classes.list}>
               <ul>
