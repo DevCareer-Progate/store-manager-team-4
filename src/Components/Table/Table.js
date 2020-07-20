@@ -5,7 +5,7 @@ class Table extends Component {
   renderTableData() {
     if (this.props.products.length > 0) {
       return this.props.products.map((product, index) => {
-        const { id, name, amount, qty, description, action } = product; //destructuring
+        const { id, name, amount, qty, description } = product; //destructuring
         return (
           <tr key={id}>
             <td>{id}</td>
@@ -33,7 +33,7 @@ class Table extends Component {
           <td></td>
           <td></td>
           <td></td>
-          {/* <td>{action}</td> */}
+          <td></td>
         </tr>
       );
     }

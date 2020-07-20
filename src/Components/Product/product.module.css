@@ -22,7 +22,7 @@
   background-color: white;
   font: inherit;
   padding: 7px 10px;
-  width: 100%;
+  width: 50%;
   display: block;
   box-sizing: border-box;
   margin-top: 30px;
@@ -35,7 +35,7 @@
 }
 
 .InputElement:last-child {
-  width: 100%;
+  width: 60%;
   margin-bottom: 35px;
 }
 

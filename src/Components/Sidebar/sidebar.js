@@ -7,6 +7,8 @@ import Admin from "../Admin/Admin";
 import Attendant from "../Attendant/Attendant";
 
 import classes from "./sidebar.module.css";
+
+
 class SidebarNav extends Component {
   state = {
     currentChild: 0,
@@ -77,9 +79,9 @@ class SidebarNav extends Component {
     let children;
     // eslint-disable-next-line no-lone-blocks
     {
-      if (this.state.currentChild == 1) children = <Admin />;
-      else if (this.state.currentChild == 2) children = <Attendant />;
-      else if (this.state.currentChild == 3)
+      if (this.state.currentChild === 1) children = <Admin />;
+      else if (this.state.currentChild === 2) children = <Attendant />;
+      else if (this.state.currentChild === 3)
         children = (
           <Product
             name={this.state.name}
