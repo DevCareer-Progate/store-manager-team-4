@@ -92,7 +92,7 @@ class SidebarNav extends Component {
             submitForm={this.submitFormHandler}
           />
         );
-      else if (this.state.currentChild == 4)
+      else if (this.state.currentChild === 4)
         children = <Sales products={this.state.products} />;
     }
     // console.log(this.state);

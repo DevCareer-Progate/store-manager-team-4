@@ -16,10 +16,10 @@ class Table extends Component {
             <td>
               <span className={classes.action}>
               <p>
-                <a href='#'>Sell</a>
+                <a href='/'>Sell</a>
               </p>
               <p>
-                <a href='#'>Delete</a>
+                <a href='/'>Delete</a>
               </p>
               </span></td>
           </tr>
