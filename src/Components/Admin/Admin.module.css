@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  
+    /*font-family: "Merriweather" "poppins";
+      font-size:20px;*/
+  }
+  ul {
+    list-style: none;
+  }
+  
+  .list li {
+    color: #333;
+  }
+  
+  /* profile-icon*/
+  .profile {
+    height: 80px;
+    border-radius: 50px;
+    margin-left: 30rem;
+    margin-top: 50px;
+  }
+  /* edit profile text*/
+  p {
+    float: right;
+    color: #0a97b0;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+  
+  .border {
+    border-bottom: 2px solid #0a97b0;
+    margin: 2rem 10rem;
+  }
+  
+  button {
+    background-color: #0a97b0;
+    padding: 14px 48px;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    border-radius: 13px;
+    position: relative;
+    margin-left: 21rem;
+    margin-top: 3rem;
+  }
+  
