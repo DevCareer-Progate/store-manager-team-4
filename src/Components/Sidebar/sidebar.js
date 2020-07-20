@@ -7,7 +7,6 @@ import Attendant from "../Attendant/Attendant";
 
 import classes from "./sidebar.module.css";
 
-
 class SidebarNav extends Component {
   state = {
     currentChild: 0,
@@ -16,7 +15,7 @@ class SidebarNav extends Component {
     amount: "",
     qty: "",
     description: "",
-    action: {sell: 'sell', Delete: 'delete'},
+    action: { sell: "sell", Delete: "delete" },
     products: []
   };
 
@@ -101,7 +100,9 @@ class SidebarNav extends Component {
         <div className={classes.sidebar}>
           <div className={classes.sidebarContent}>
             <div className={classes.logo}>
-              <h3>S<span>T</span>M</h3>
+              <h3>
+                S<span>T</span>M
+              </h3>
             </div>
             <div className={classes.list}>
               <ul>
