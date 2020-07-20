@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 
 import classes from "./Sales.module.css";
 
-import Button from "../Button/Button";
 import Table from "../Table/Table";
 import searchIcon from "../../../src/assests/images/Dashboard (Salea)/searchIcon.png";
 

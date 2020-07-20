@@ -1,4 +1,3 @@
-import React from "react";
 
 const menuData = [
   { id: 1, pageName: "Admin", url: "" },
