@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import menuData from "./data";
 import Product from "../Product/product";
 import Sales from "../Sales/Sales";
 import Admin from "../Admin/Admin";
