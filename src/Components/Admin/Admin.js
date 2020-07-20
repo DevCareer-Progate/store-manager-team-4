@@ -7,12 +7,12 @@ import passport from "../../assests/images/passport.jpg";
 import Button from "../Button/Button";
 
 const Admin = (props) => {
-  const data = ["New product", " New sales", "Total Products", "Total Sales"];
+//   const data = ["New product", " New sales", "Total Products", "Total Sales"];
 
   return (
     <Fragment>
       <div>
-        <img className={classes.profile} src={passport} />
+        <img className={classes.profile} src={passport} alt={'passport'} />
         <p>Edit profile</p>
       </div>
 
