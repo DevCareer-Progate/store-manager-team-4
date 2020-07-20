@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 
 import classes from "./Sales.module.css";
 
-import Button from "../Button/Button";
 import Table from "../Table/Table";
 import searchIcon from "../../../src/assests/images/Dashboard (Salea)/searchIcon.png";
 
@@ -12,8 +11,7 @@ const product = props => (
       <div className={classes.salesDetails}>
         <form>
           <div className={classes.formControl}>
-            {/* <label htmlFor="productName"></label> */}
-            <img src={searchIcon}></img>
+            <img src={searchIcon} alt={'searchIcon'}></img>
             <input
               type="text"
               name="name"
